@@ -1,0 +1,43 @@
+import java.util.*;
+ class armstrong {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n = sc.nextInt();
+        int temp=n;
+        int count=0,a=0,aa=0;
+        double sum=0;
+        while (temp != 0) {
+            a = temp% 10;
+            temp = temp / 10;
+            count++;
+        }
+       temp=n;
+        System.out.println("NO OF DIGIT "+count);
+        while(temp!=0) {
+            aa = temp % 10;
+            sum += Math.pow(aa, count);
+            temp = temp / 10;
+        }
+            if((int)sum==n){
+                System.out.println("ARMSTRONG NUMBER : " +n);
+            }
+            else{
+                System.out.println("NOT A ARMSTRONG NUMBER :"+n);
+            }
+        }
+    }
+
+
+
+Output1;
+Enter the number
+1289
+NO OF DIGIT 4
+NOT A ARMSTRONG NUMBER :1289
+
+Output2;
+Enter the number
+153
+NO OF DIGIT 3
+ARMSTRONG NUMBER : 153
